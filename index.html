@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秀秀美甲店 | Show Show Nail Salon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4A373',   // 大地棕
+                        bgCustom: '#FAF9F6',  // 亞麻白
+                        accent: '#FCE7F3',     // 淡粉色
+                        accentHover: '#FBCFE8'
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif TC"', 'serif'],
+                        sans: ['"Noto Sans TC"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #FAF9F6;
+        }
+        .font-serif-title {
+            font-family: 'Noto Serif TC', serif;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif-title text-2xl font-black tracking-wider text-primary">秀秀美甲</a>
+            
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#gallery" class="hover:text-primary transition-colors">作品展示</a>
+                <a href="#pricing" class="hover:text-primary transition-colors">服務價目</a>
+                <a href="#booking" class="hover:text-primary transition-colors">預約資訊</a>
+                <a href="#contact" class="hover:text-primary transition-colors">聯絡方式</a>
+            </nav>
+            
+            <div class="hidden md:block">
+                <a href="#booking" class="bg-primary text-white px-6 py-2.5 rounded-2xl font-medium hover:bg-[#c29262] transition-all shadow-sm">
+                    立即線上預約
+                </a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#gallery" class="block py-2 text-gray-600 hover:text-primary font-medium">作品展示</a>
+            <a href="#pricing" class="block py-2 text-gray-600 hover:text-primary font-medium">服務價目</a>
+            <a href="#booking" class="block py-2 text-gray-600 hover:text-primary font-medium">預約資訊</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-primary font-medium">聯絡方式</a>
+            <a href="#booking" class="block text-center bg-primary text-white py-2.5 rounded-2xl font-medium">立即線上預約</a>
+        </div>
+    </header>
+
+    <section class="relative min-h-[calc(100vh-5rem)] flex items-center bg-gradient-to-tr from-accent/30 via-bgCustom to-transparent px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12">
+            <div class="space-y-6 text-center lg:text-left z-10">
+                <span class="inline-block bg-accent text-gray-700 px-4 py-1.5 rounded-2xl text-sm font-medium tracking-wide">專業美甲沙龍</span>
+                <h1 class="font-serif-title text-4xl sm:text-5xl lg:text-6xl font-black text-gray-950 leading-tight">
+                    指尖上的藝術<br><span class="text-primary">襯托妳的獨特溫柔</span>
+                </h1>
+                <p class="text-gray-600 text-base sm:text-lg max-w-md mx-auto lg:mx-0">
+                    不只是愛美，更是對生活的一種精緻態度。秀秀美甲提供量身打造的指尖設計，讓妳每一次舉手投足都充滿自信光彩。
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <a href="#booking" class="bg-primary text-white px-8 py-3.5 rounded-2xl font-semibold text-lg hover:bg-[#c29262] transition-all shadow-md text-center">
+                        預約專屬時段
+                    </a>
+                    <a href="#gallery" class="bg-white text-gray-700 border border-gray-200 px-8 py-3.5 rounded-2xl font-semibold text-lg hover:bg-gray-50 transition-all text-center">
+                        瀏覽最新作品
+                    </a>
+                </div>
+            </div>
+            <div class="relative mx-auto lg:ml-auto w-full max-w-md lg:max-w-none">
+                <div class="absolute inset-0 bg-accent rounded-2xl transform rotate-3 scale-102 opacity-40 blur-sm"></div>
+                <img src="https://images.unsplash.com/photo-1604654894610-df4906b1850d?auto=format&fit=crop&w=800&q=80" alt="秀秀美甲主打作品" class="relative z-10 w-full h-[400px] sm:h-[500px] object-cover rounded-2xl shadow-xl">
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-gray-950">經典作品展示</h2>
+            <div class="w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+            <p class="text-gray-500 mt-4">點擊圖片可放大欣賞細節，尋找屬於妳的指尖靈感</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="group cursor-pointer relative overflow-hidden rounded-2xl shadow-sm bg-white" onclick="openLightbox('https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&w=800&q=80', '溫柔法式氣質造型')">
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&w=800&q=80" alt="作品1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-4 border-t border-gray-50 flex justify-between items-center">
+                    <span class="font-medium text-gray-900">溫柔法式氣質造型</span>
+                    <span class="text-xs bg-accent text-gray-700 px-2.5 py-1 rounded-2xl">熱門</span>
+                </div>
+            </div>
+            <div class="group cursor-pointer relative overflow-hidden rounded-2xl shadow-sm bg-white" onclick="openLightbox('https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80', '春日輕奢貓眼設計')">
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80" alt="作品2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-4 border-t border-gray-50 flex justify-between items-center">
+                    <span class="font-medium text-gray-900">春日輕奢貓眼設計</span>
+                    <span class="text-xs bg-accent text-gray-700 px-2.5 py-1 rounded-2xl">顯白</span>
+                </div>
+            </div>
+            <div class="group cursor-pointer relative overflow-hidden rounded-2xl shadow-sm bg-white" onclick="openLightbox('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80', '日系手繪暈染碎鑽')">
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="作品3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-4 border-t border-gray-50 flex justify-between items-center">
+                    <span class="font-medium text-gray-900">日系手繪暈染碎鑽</span>
+                    <span class="text-xs bg-accent text-gray-700 px-2.5 py-1 rounded-2xl">精緻</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 bg-gradient-to-b from-transparent to-accent/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-gray-950">服務價目表</h2>
+                <div class="w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+                <p class="text-gray-500 mt-4">價格透明無隱藏消費，給妳最安心的精緻體驗</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif-title text-xl font-bold text-gray-900 mb-6 flex items-center">
+                            <span class="w-2 h-6 bg-primary rounded-full mr-3"></span>經典基礎項目
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span class="text-gray-600 font-medium">基礎手部保養</span>
+                                <span class="text-primary font-bold">$400</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span class="text-gray-600 font-medium">精緻單色 / 璀璨（本甲）</span>
+                                <span class="text-primary font-bold">$500</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span class="text-gray-600 font-medium">本店卸甲（不續作）</span>
+                                <span class="text-primary font-bold">$200</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2">
+                                <span class="text-gray-600 font-medium">他店卸甲</span>
+                                <span class="text-primary font-bold">$300</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-accent text-gray-700 text-xs px-4 py-1 rounded-bl-2xl font-medium">推薦主打</div>
+                    <div>
+                        <h3 class="font-serif-title text-xl font-bold text-gray-900 mb-6 flex items-center">
+                            <span class="w-2 h-6 bg-primary rounded-full mr-3"></span>進階造型設計
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span class="text-gray-600 font-medium">凝膠全延甲服務</span>
+                                <span class="text-primary font-bold">$1,000 <span class="text-xs text-gray-400 font-normal">起</span></span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span class="text-gray-600 font-medium">獨特貓眼設計</span>
+                                <span class="text-primary font-bold">+$200 / 填加</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span class="text-gray-600 font-medium">日系暈染 / 手繪造型</span>
+                                <span class="text-gray-400 text-sm">依複雜度另計</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2">
+                                <span class="text-gray-600 font-medium">精緻貼鑽 / 珍珠裝飾</span>
+                                <span class="text-gray-400 text-sm">現場報價</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto mt-6 bg-white/60 backdrop-blur-sm p-4 rounded-2xl text-center text-sm text-gray-500 border border-gray-100">
+                💡 <strong>造型注意事項：</strong> 現場會依您挑選的複雜度與貼鑽多寡進行詳細報價，確認後才開始施作。
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-gray-950">預約須知 & 線上預約</h2>
+            <div class="w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+            <p class="text-gray-500 mt-4">為了維護每位客人的權益，請在預約前詳閱以下規範</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-7 space-y-8">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100 space-y-4">
+                    <h3 class="font-bold text-lg text-gray-900 flex items-center">
+                        📌 顧客預約守則
+                    </h3>
+                    <ul class="space-y-3 text-gray-600 text-sm sm:text-base">
+                        <li class="flex items-start"><span class="text-primary mr-2">•</span><strong>固定公休：</strong> 每週日固定公休，不開放預約。</li>
+                        <li class="flex items-start"><span class="text-primary mr-2">•</span><strong>遲到保留：</strong> 位子僅保留 15 分鐘。遲到超過 15 分鐘將自動取消當日預約或視情況刪減施作項目。</li>
+                        <li class="flex items-start"><span class="text-primary mr-2">•</span><strong>取消變更：</strong> 若需取消或更改時間，請最晚於前 1 天通知我們。</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                    <h4 class="font-semibold text-gray-900 mb-3 flex items-center px-2">
+                        📍 店鋪位置
+                    </h4>
+                    <div class="w-full h-64 rounded-2xl overflow-hidden relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.8872412850383!2d121.50494497615024!3d25.139446434033324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae446e5ca94b%3A0x6b107e0504746f3!2zMTEy5Y-w5YyX5biC5YyX5oqV5Y2A5Lit5bGx6LevMg==!5e0!3m2!1szh-TW!2stw!4v1716700000000!5m2!1szh-TW!2stw" 
+                            class="absolute top-0 left-0 w-full h-full border-0 rounded-2xl" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <p class="text-xs text-primary font-medium mt-2 px-2">※ 地址：台北市北投區中山路 2 號 (新北投捷運站步行即可抵達)</p>
+                </div>
+            </div>
+
+            <div id="booking-form" class="lg:col-span-5 bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-accent/40">
+                <h3 class="font-serif-title text-xl font-bold text-gray-900 mb-6">預約諮詢表單</h3>
+                <form class="space-y-4" onsubmit="handleFormSubmit(event)">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">您的姓名 *</label>
+                        <input type="text" required class="w-full px-4 py-2.5 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">手機號碼 *</label>
+                        <input type="tel" required class="w-full px-4 py-2.5 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">希望施作項目 *</label>
+                        <select required class="w-full px-4 py-2.5 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary text-sm bg-white">
+                            <option value="">請選擇項目</option>
+                            <option value="basic">精緻單色 / 璀璨 ($500)</option>
+                            <option value="extension">凝膠全延甲服務 ($1,000 起)</option>
+                            <option value="custom">造型設計 (現場報價)</option>
+                            <option value="care">僅做基礎手部保養 ($400)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">是否需要卸甲？ *</label>
+                        <div class="flex space-x-6 py-1">
+                            <label class="inline-flex items-center text-sm text-gray-600 cursor-pointer">
+                                <input type="radio" name="remove_nail" value="no" checked class="text-primary focus:ring-primary mr-2">不需要
+                            </label>
+                            <label class="inline-flex items-center text-sm text-gray-600 cursor-pointer">
+                                <input type="radio" name="remove_nail" value="yes_our" class="text-primary focus:ring-primary mr-2">本店卸甲
+                            </label>
+                            <label class="inline-flex items-center text-sm text-gray-600 cursor-pointer">
+                                <input type="radio" name="remove_nail" value="yes_other" class="text-primary focus:ring-primary mr-2">他店卸甲
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">備註 / 許願風格描述</label>
+                        <textarea rows="3" placeholder="例如：想要溫柔貓眼、想要貼鑽..." class="w-full px-4 py-2.5 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary text-sm"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-primary text-white py-3 rounded-2xl font-semibold hover:bg-[#c29262] transition-colors shadow-sm mt-2">
+                        送出預約申請
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-950 text-gray-400 py-12 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left space-y-2">
+                <span class="font-serif-title text-xl font-bold text-white tracking-wider">秀秀美甲店</span>
+                <p class="text-sm text-gray-400">📍 台北市北投區中山路 2 號</p>
+                <p class="text-xs text-gray-600">© 2026 Show Show Nail Salon. All rights reserved.</p>
+            </div>
+
+            <div class="flex space-x-6 items-center">
+                <a href="https://instagram.com" target="_blank" class="hover:text-white transition-colors flex flex-col items-center gap-1 text-sm">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://facebook.com" target="_blank" class="hover:text-white transition-colors flex flex-col items-center gap-1 text-sm">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://line.me" target="_blank" class="hover:text-white transition-colors flex flex-col items-center gap-1 text-sm">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    <span>Line 預約</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="hidden fixed inset-0 z-50 bg-black/90 flex flex-col items-center justify-center p-4" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-3xl focus:outline-none">×</button>
+        <img id="lightbox-img" src="" alt="放大作品" class="max-w-full max-h-[80vh] rounded-2xl object-contain shadow-2xl">
+        <p id="lightbox-caption" class="text-white mt-4 text-lg font-medium"></p>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        function openLightbox(imgSrc, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            lightboxImg.src = imgSrc;
+            lightboxCaption.textContent = caption;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert('感謝您的預約申請！系統已收到您的諮詢，秀秀美甲將會儘速透過電話或社群軟體與您確認最終預約時段喔！✨');
+            event.target.reset();
+        }
+    </script>
+
+</body>
+</html>
